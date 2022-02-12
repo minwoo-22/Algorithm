@@ -2,7 +2,7 @@ package level01;
 
 import java.util.Arrays;
 
-public class budget {
+public class Budget {
     public static void main(String[] args) {
         int[] d = {2,2,3,3};
         int budget = 10;
