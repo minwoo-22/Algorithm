@@ -1,4 +1,4 @@
-package level01;
+package programmers.level01;
 
 public class Collatz {
     public static void main(String[] args) {
