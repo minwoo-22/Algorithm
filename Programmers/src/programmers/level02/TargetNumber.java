@@ -15,7 +15,6 @@ public class TargetNumber {
         method(numbers, 1, numbers[0], target);
         method(numbers, 1, -numbers[0], target);
         
-        System.out.println("result : " + result);
         answer = result;
         return answer;
     }
