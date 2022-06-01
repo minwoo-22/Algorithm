@@ -1,6 +1,6 @@
-package level01;
+package programmers.level01;
 
-public class year2016 {
+public class Year2016 {
 
     public static void main(String[] args) {
         int a = 5;

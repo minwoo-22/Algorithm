@@ -1,6 +1,4 @@
-package level01;
-
-import java.util.Arrays;
+package programmers.level01;
 
 public class Dart_Game {
     public static void main(String[] args) {

@@ -1,8 +1,8 @@
-package level01;
+package programmers.level01;
 
 import java.util.Arrays;
 
-public class not_finish {
+public class NotFinish {
 
     public static void main(String[] args) {
         String[] participant = {"mislav", "stanko", "mislav", "ana"};

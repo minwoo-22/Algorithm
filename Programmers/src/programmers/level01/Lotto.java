@@ -1,4 +1,4 @@
-package level01;
+package programmers.level01;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -15,54 +15,27 @@ public class Lotto {
     
     
     public static int[] solution(int[] lottos, int[] win_nums) {
+        Map<Integer, Boolean> map = new HashMap<>();
         int check = 0;
         int zero = 0;
-        for (int i = 0; i < 6; i++) {
-            for (int j = 0; j < 6; j++) {
-                if (lottos[i] == win_nums[j]) {
-                    check++;
-                } else if (lottos[i] == 0) {
-                    zero++;
-                    break;
-                }
+        
+        for (int lotto : lottos) {
+            if (lotto == 0) {
+                zero++;
+                continue;
             }
+            map.put(lotto, true);
         }
-        int top = 0;
-        int low = 0;
-        switch(check+zero) {
-            case 6:
-                top = 1;
-                low = top+zero;
-                break;
-            case 5:
-                top = 2;
-                low = top+zero;
-                break;
-            case 4:
-                top = 3;
-                low = top+zero;
-                break;
-            case 3:
-                top = 4;
-                low = top+zero;
-                break;
-            case 2:
-                top = 5;
-                low = top+zero;
-                break;
-            case 1:
-                top = 6;
-                low = top+zero;
-                break;
-            case 0:
-                top = 6;
-                low = 6;
-                break;
-            
+        
+        for (int win : win_nums) {
+            if (map.containsKey(win)) check++;
         }
-        if (low > 6) low = 6;
-        int[] answer = {top, low};
-        return answer;
+        int top = 7 - (check+zero);
+        int low = 7 - check;
+        if (top > 7) top = 6;
+        if (low > 7) low = 6;
+        
+        return new int[]{top, low};
     }
     
 }

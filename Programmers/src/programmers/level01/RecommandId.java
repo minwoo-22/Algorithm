@@ -1,7 +1,7 @@
-package level01;
+package programmers.level01;
 
 
-public class recommand_id {
+public class RecommandId {
 
     public static void main(String[] args) {
         String new_id = "qoWEi324512...rgs11@#rfwe66-_4";
