@@ -16,22 +16,24 @@ public class AplusB4 {
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         List<Integer> list = new ArrayList<>();
         
-        
-        while (true) {
-            StringTokenizer st = new StringTokenizer(br.readLine());
+        StringTokenizer st;
+        String value;
+
+        while((value=br.readLine()) != null){
+
+            st = new StringTokenizer(value, " ");
+
             int A = Integer.parseInt(st.nextToken());
             int B = Integer.parseInt(st.nextToken());
-            if (A <= 0 || A > 9 || B <= 0 || B > 9) {
-                break;
-            }
+            
             list.add(A + B);
+
         }
         
         for (int num : list) {
-            bw.write(num + "\n");
+            bw.write(String.valueOf(num) + "\n");
         }
         
-        bw.flush();
         bw.close();
     }
 
