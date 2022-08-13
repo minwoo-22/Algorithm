@@ -1,30 +1,36 @@
 package baekjoon.math1;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.util.StringTokenizer;
 
 public class Snail {
-    public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        System.out.print("아침에 올라갈 높이> ");
-        int a = scan.nextInt();
-        System.out.print("저녁에 내려올 높이> ");
-        int b = scan.nextInt();
-        System.out.print("나무의 높이> ");
-        int v = scan.nextInt();
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        StringTokenizer st = new StringTokenizer(br.readLine());
         
-        int tot = 0;
-        int i = 1;
+        int A = Integer.parseInt(st.nextToken());
+        int B = Integer.parseInt(st.nextToken());
+        int V = Integer.parseInt(st.nextToken());
+        br.close();
         
-        while(true) {
-            tot += a;
-            if(tot >= v) {
-                break;
-            }
-            tot -= b;
-            i++;
+        int cnt = 1;
+        int num = A - B;
+        V -= A;
+        
+        int result = V / num;
+        int remain = V % num;
+        if (remain == 0) {
+            cnt += result;
+        } else {
+            cnt += result + 1;
         }
         
-        System.out.println(i);
-        scan.close();
+        bw.write(String.valueOf(cnt));
+        bw.close();
     }
 }
