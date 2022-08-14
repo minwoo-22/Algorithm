@@ -1,4 +1,4 @@
-package beakjoon.io;
+package baekjoon.io;
 
 public class Sprout {
     public static void main(String[] args) {

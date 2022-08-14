@@ -1,11 +1,11 @@
-package beakjoon.io;
+package baekjoon.io;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class AmultiplyB {
+public class AminusB {
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -14,10 +14,11 @@ public class AmultiplyB {
         int A = Integer.parseInt(st.nextToken());
         int B = Integer.parseInt(st.nextToken());
         
-        System.out.println(multiply(A, B));
+        System.out.println(minus(A, B));
     }
     
-    private static int multiply(int A, int B) {
-        return A * B;
+    private static int minus(int A, int B) {
+        return A - B;
     }
+
 }
